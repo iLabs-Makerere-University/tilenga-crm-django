@@ -1,0 +1,16 @@
+{% extends "authentication/layout.html" %}
+
+{% block content %}
+<div style="margin-left: 5rem;">
+    <div class="card" style="width: 18rem;">
+    {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+    <div class="card-body">
+        <h5 class="card-title">{{ company.company_name}}</h5>
+        <p class="card-text">{{ company.location }}</p>
+        <p class="card-text">{{ company.description}}</p>
+        <a href="{% url 'authentication:company-update' pk=company.pk %}" class="btn btn-primary">Edit Details</a>
+    </div>
+    </div>
+</div>
+
+{% endblock content %}

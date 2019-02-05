@@ -1,0 +1,7 @@
+{% extends "authentication/layout.html" %}
+
+{% block content %}
+    {% for item  in user %}
+        <div>Username: {{ item }}</div>
+    {% endfor %}
+{% endblock %}
