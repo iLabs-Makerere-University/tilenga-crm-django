@@ -1,0 +1,17 @@
+{% block content %}
+    <form method="POST" action="">
+    {% csrf_token %}
+        {% for item in form %}
+            <div>
+                <label>{{ item.label}}: {{item}}
+            </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+    <hr/>
+    <h3>Create Company</h3>
+    <iframe src = "{% url 'authentication:create-employee' %}"></iframe>
+    <hr/>
+    <h3>Assign Employee to Company</h3>
+    <iframe src = "{% url 'authentication:create-employee' %}"></iframe>
+{% endblock content %}

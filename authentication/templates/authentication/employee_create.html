@@ -1,0 +1,14 @@
+{% extends "authentication/layout.html" %}
+{% load widget_tweak %}
+{% block content %}
+    <form method="POST" action="">
+        {% for item in form %}
+            <div class="form-control">
+                <label>{{ item.label }}: {{item|add_class:"form-control"}}
+            </div>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock content %}
+
+
