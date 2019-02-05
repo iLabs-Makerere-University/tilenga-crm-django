@@ -16,7 +16,6 @@ urlpatterns = [
     ),
         name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('accounts/', include('django.contrib.auth.urls')),
     path('employees/', views.EmployeeCreateView.as_view(), name='create-employee'),
     path('user/create/', views.CreateUserView.as_view(), name='create-user'),
     path('company/', views.CompanyListView.as_view(), name='company-list'),
