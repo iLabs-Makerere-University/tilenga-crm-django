@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% for order in call_off_orders %}
+<div class="card" style="width: 18rem; float:left; height: 12rem; margin:1rem;">
+  {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+  <div class="card-body">
+    <h5 class="card-title">{{ order.instruction_title}}</h5>
+    <p class="card-text">{{ order.service_description }}</p>
+    <a href="{% url 'order:call-off-order-detail' pk=order.pk %}" class="btn btn-primary">Details</a>
+    <a href="{% url 'order:call-off-order-update' pk=order.pk %}" class="btn btn-primary">Edit Details</a>
+  </div>
+</div>
+{% endfor %}
+{% endblock content %}
+

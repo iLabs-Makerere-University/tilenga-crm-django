@@ -9,6 +9,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
 
     <title>{{ title }}</title>
   </head>
@@ -24,16 +26,24 @@
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'authentication:company-list'%}">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'authentication:company-list' %}">Companies</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+              Companies
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+              <a class="dropdown-item" href="{% url 'authentication:company-list' %}">View all Companies</a>
+              <a class="dropdown-item" href="{% url 'authentication:create-company'%}">Add Company</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Update Company</a>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Call Off Orders
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">View all Orders</a>
-              <a class="dropdown-item" href="#">Generate Order</a>
+              <a class="dropdown-item" href="{% url 'order:order-list' %}">View all Orders</a>
+              <a class="dropdown-item" href="{% url 'order:call-off-order-create'%}">Generate Order</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">View Notifications</a>
             </div>

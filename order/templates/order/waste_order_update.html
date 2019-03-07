@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% load widget_tweaks %}
+{% block content %}
+    <div style="margin-left: 5rem;">
+        <form method="POST" action="">
+        {% csrf_token %}
+            {% for item in form %}
+                <div class="form-group">
+                    <label>{{ item.label }}</lable>: {{item|add_class:"form-control"}}
+                </div>
+            {% endfor %}
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    
+{% endblock content %}

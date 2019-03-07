@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% for order in waste_orders %}
+<div class="card" style="width: 18rem; float:left; height: 12rem; margin:1rem;">
+  {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+  <div class="card-body">
+    <h5 class="card-title">{{ order.waste_transfer_note_number}}</h5>
+    <p class="card-text">{{ order.waste_description }}</p>
+    <a href="{% url 'order:order-detail' pk=order.pk %}" class="btn btn-primary">Details</a>
+    <a href="{% url 'order:order-update' pk=order.pk %}" class="btn btn-primary">Edit Details</a>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock content %}
+
