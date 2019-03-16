@@ -1,0 +1,32 @@
+{% block sidenav %}
+<style>
+    .sidenav{
+        float:left;
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .sidenav a{
+        float: left;
+        width: 200px;
+        height: 50px;
+        margin-bottom: 10px;
+        color: #232227;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    .sidenav a:hover{
+        background-color: #168EFF;
+    }
+</style>
+
+<div class="sidenav">
+  <a href="#">Transport Request</a>
+  <a href="#">Waste Treatment Service Request</a>
+  <a href="#">Lab Service Request</a>
+  <a href="#">Waste Service Request</a>
+</div>
+
+
+{% endblock sidenav %}

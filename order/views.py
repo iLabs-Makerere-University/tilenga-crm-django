@@ -41,3 +41,6 @@ class CallOffOrderDetailView(generic.DetailView):
     model = CallOffOrder
     template_name = 'order/call_off_orders_list.html'
     context_object_name = 'call_off_order'
+
+def process_call_off_order(request, pk):
+    return render(request, 'order/call_off_order_process.html')

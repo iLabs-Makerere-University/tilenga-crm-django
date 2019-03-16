@@ -12,6 +12,7 @@ urlpatterns = [
     path('call-off-orders/create/', views.CallOffOrderCreateView.as_view(), name='call-off-order-create'),
     path('call-off-orders/detail/<int:pk>/', views.CallOffOrderDetailView.as_view(), name='call-off-order-detail'),
     path('call-off-orders/update/<int:pk>/', views.CallOffOrderUpdate.as_view(), name='call-off-order-update'),
+    path('call-off-orders/process/<int:pk>/', views.process_call_off_order, name="order-process"),
     # path('call-off-orders/delete/<int:pk>/', views.CallOffOrderDeleteView.as_view(), name='call-off-order-delete'),
 ]
 
