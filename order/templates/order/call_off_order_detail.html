@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% include "service_sidebar.html" %}
+
+<div style="margin-left: 5rem; ">
+    <h3>Service Instruction Detail</h3>
+    <div class="card" style="width: 18rem;">
+    {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+        <div class="card-body">
+            <h5 class="card-title">{{ call_off_order.instruction_title}}</h5>
+            <p class="card-text">{{ call_off_order.service_description }}</p>
+            <p class="card-text">{{ call_off_order.waste_description}}</p>
+            <a href="{% url 'order:call-off-order-update' pk=call_off_order.pk %}" class="btn btn-primary">Edit Details</a>
+            <a href="{% url 'service:create' %}" class="btn btn-primary">Next Service</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

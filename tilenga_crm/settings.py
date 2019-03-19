@@ -39,7 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authentication.apps.AuthenticationConfig',
     'order.apps.OrderConfig',
+    'service.apps.ServiceConfig',
     'widget_tweaks',
+    'crispy_forms',
+    'waste.apps.WasteConfig',
+    'logistics.apps.LogisticsConfig',
+    'waste_collection.apps.WasteCollectionConfig',
+    'waste_reception.apps.WasteReceptionConfig',
+    'waste_treatment.apps.WasteTreatmentConfig',
+    'reporting_invoicing.apps.ReportingInvoicingConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,23 @@
+
+{% load widget_tweaks %}
+{% block content %}
+<h3>Generate Lab Request</h3>
+    {% comment %} <div style="margin-left: 5rem;">
+        {% load crispy_forms_tags %}
+        <form action="/testview/" method="post">
+        <!----- render your forms here -->
+        {% crispy contact_form %}
+        {% crispy social_form%}
+        <input type='submit' value="Save" />
+        </form>
+            {% comment %} {% for item in form %}
+                <div class="form-group">
+                    <label>{{ item.label }}</lable>: {{item|add_class:"form-control"}}
+                </div>
+            {% endfor %}
+            <button class="btn btn-primary" type="submit">Submit</button> {% endcomment %}
+        </form>
+        
+    </div> {% endcomment %}
+{% endblock %}
+    

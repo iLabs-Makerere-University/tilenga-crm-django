@@ -1,0 +1,47 @@
+{% block content %}
+<style>
+    .side-nav{
+        width: 300px;
+        margin: 10px;
+        float: left;
+        
+    }
+
+    .side-nav ul li{
+        list-style: none;
+        height: 50px;
+        margin: border solid 1px #1D1717;
+    }
+
+    .side-nav ul li a{
+        text-decoration: none;
+    }
+
+    .side-nav ul li: hover{
+        background-color: #B2A3A3;
+    }
+</style>
+<div class="side-nav">
+    <ul>
+        <li>
+            <a href="{% url 'service:create' %}">Special Service Request</a>
+        </li>
+        <li>
+            <a href="{% url 'waste:create-plan' %}">Waste Management Plan</a>
+        </li>
+        <li>
+            <a href="{% url 'logistics:create' %}">Inspection</a>
+        </li>
+        <li>
+            <a href="{% url 'waste_collection:create' %}">Collection Service Form</a>
+        </li>
+
+        <li>
+            <a href="{% url 'waste_reception:create' %}">Waste Reception</a>
+        </li>
+        <li>
+            <a href="{% url 'waste_treatment:create' %}">Waste Processing/ Treatment</a>
+        </li>
+    </ul>
+</div>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% load widget_tweaks %}
+{% block content %}
+    <div style="margin: 5rem;">
+        <h3>Add Facility</h3>
+        <hr/>
+        <form method="POST" action="#">
+        {% csrf_token %}
+            {% for item in form %}
+                <div class="form-group">
+                    {% if item.label == "Name" %}
+                        <label>{{ item.label }}</label>: {{item|add_class:"form-control"}}
+                        <label>Add Company details</label> <a href="{% url 'authentication:create-company' %}"><i class="fas fa-plus"></i></a>
+                    {% elif item.label == 'Equipment' %}
+                        <label>{{ item.label }}</label>: {{item|add_class:"form-control"}}
+                        <label>Add Equipment</label> <a href="{% url 'waste:add-equipment' %}"><i class="fas fa-plus"></i></a>
+                    {% else %}
+                        <label>{{ item.label }}</label>: {{item|add_class:"form-control"}}
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    
+{% endblock content %}

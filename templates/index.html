@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="card" style="width: 18rem; float:left; height: 12rem; margin:1rem;">
+  {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+  <div class="card-body">
+    <h5 class="card-title">Total Uganda</h5>
+    <p class="card-text">Major Service Generator for waste managers and 3rd party service providers</p>
+    <a href="{% url 'order:service-create' %}" class="btn btn-primary">Generate Service Request</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem; float:left; height: 12rem; margin:1rem;">
+  {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+  <div class="card-body">
+    <h5 class="card-title">The Initiates Uganda</h5>
+    <p class="card-text">Waste Management Contractor and aggregator of 3rd party service providers</p>
+    <a href="{% url 'order:service-list' %}" class="btn btn-primary">View Service Requests</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem; float:left; height: 12rem; margin:1rem;">
+  {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+  <div class="card-body">
+    <h5 class="card-title">Third Party Service Provider</h5>
+    <p class="card-text">Aggregation of 3rd party service providers</p>
+    <a href="{% url 'authentication:company-list' %}" class="btn btn-primary">View Companies</a>
+  </div>
+</div>
+
+{% endblock content %}
+

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<div class="wrapper">
+    <div id="content">
+        <div style="margin-left: 5rem;">
+            <div class="card" style="width: 18rem;">
+            {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+            <div class="card-body">
+                <h5 class="card-title">{{ waste_order.waste_transfer_note_number}}</h5>
+                <p class="card-text">{{ waste_order.waste_description }}</p>
+                <p class="card-text">{{ waste_order.total_amount}} {{waste_order.unit_of_measurement}}</p>
+                {% comment %} <a href="{% url 'service:update' pk=waste_order.pk %}" class="btn btn-primary">Edit Details</a>
+                <a href="{% url 'service:process' pk=waste_order.pk %}" class="btn btn-primary">Process Order</a> {% endcomment %}
+            </div>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

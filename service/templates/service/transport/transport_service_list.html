@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if lab_requests %}
+    {% for service in transport_services %}
+
+    <div class="card" style="width: 18rem; float:left; height: 12rem; margin:1rem;">
+        {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+        <div class="card-body">
+            <h5 class="card-title">{{ service.waste }}</h5>
+            <p class="card-text">{{ service.vehicle_type }}</p>
+            <a href="{% url 'service:detail' pk=service.pk %}" class="btn btn-primary">Details</a>
+            <a href="{% url 'service:update' pk=service.pk %}" class="btn btn-primary">Edit Details</a>
+        </div>
+    </div>
+
+    {% endfor %}
+{% else %}
+    <p class="container">No transport service requests have been made yet</p>
+{% endif %}
+
+{% endblock content %}

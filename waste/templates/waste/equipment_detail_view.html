@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div style="margin-left: 5rem;">
+    <div class="card" style="width: 18rem;">
+    <img src="{{ equipment.image }}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ equipment.name}}</h5>
+        <p class="card-text">{{ equipment.description }}</p>
+        <a href="#" class="btn btn-primary">Edit Details</a>
+    </div>
+    </div>
+</div>
+
+{% endblock content %}

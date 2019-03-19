@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if lab_requests %}
+    {% for lab_request in lab_requests %}
+
+    <div class="card" style="width: 18rem; float:left; height: 12rem; margin:1rem;">
+        {% comment %} <img src="..." class="card-img-top" alt="..."> {% endcomment %}
+        <div class="card-body">
+            <h5 class="card-title">{{ lab_request.date_created}}</h5>
+            <p class="card-text">{{ lab_request.waste_description }}</p>
+            <a href="{% url 'service:detail' pk=lab_request.pk %}" class="btn btn-primary">Details</a>
+            <a href="{% url 'service:update' pk=lab_request.pk %}" class="btn btn-primary">Edit Details</a>
+        </div>
+    </div>
+
+    {% endfor %}
+{% else %}
+    <p>No lab requests made currently</p>
+{% endif %}
+
+{% endblock content %}
