@@ -25,7 +25,9 @@ SECRET_KEY = 'c1ft+89o9np%p9l6e267(&lxn91gsfhen$&otm4nb%-)$oij=+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'tilenga-crm-django.herokuapp.com', 'localhost'
+]
 
 
 # Application definition
