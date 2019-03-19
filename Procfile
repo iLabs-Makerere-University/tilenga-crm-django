@@ -1,0 +1,1 @@
+web: gunicorn tilenga_crm.wsgi
