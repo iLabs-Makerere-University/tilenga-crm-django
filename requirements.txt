@@ -1,4 +1,4 @@
-Django==2.1.5
+Django>="2.1.5"
 django-html==0.1.0
 django-widget-tweaks==1.4.3
 pytz==2018.9
