@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'service.apps.ServiceConfig',
     'widget_tweaks',
     'crispy_forms',
+    'cloudinary',
     'waste.apps.WasteConfig',
     'logistics.apps.LogisticsConfig',
     'waste_collection.apps.WasteCollectionConfig',
